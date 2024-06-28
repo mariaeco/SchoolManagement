@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv = "X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Escolas do Estado da Paraíba</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename = 'view_escolas.css') }}">
+
+</head>
+
+
+<body>
+    <div class="container">
+        <h1>Nº DE ALUNOS MATRICULADOS POR ESCOLA</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Serie</th>
+                    <th>Turma</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for turma in turmas %}
+                <tr>
+                    <td>{{ turma[1] }}</td>
+                    <td>{{ turma[2] }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        <a href="{{ url_for('user_professor') }}"><button class="return-btn">Retornar ao Menu Professor</button></a>
+    </div>
+</body>
+</html>

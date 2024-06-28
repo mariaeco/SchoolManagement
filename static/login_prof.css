@@ -1,0 +1,93 @@
+:root {
+    --color-primary: #269fe6;
+    --color-primary-hover: #2086c2;
+    --color-primary-dark: #13141f;
+    --color-primary-dark-hover: #212336;
+    --color-primary-light: #d4ecfa;
+    --color-primary-light-hover: #bdd8e7;
+
+    --color-white: #fff;
+    --color-black: #000;
+
+    --color-dark-text: #444;
+    --color-info-light: #cce5ff;
+    --color-debug-light: #cce5ff;
+    --color-success-light: #d4edda;
+    --color-alert-light: #fff3cd;
+    --color-warning-light: #fff3cd;
+    --color-error-light: #f8d7da;
+
+    --color-info-dark: #4d86c4;
+    --color-debug-dark: #4d86c4;
+    --color-success-dark: #4a9c5d;
+    --color-alert-dark: #927f40;
+    --color-warning-dark: #927f40;
+    --color-error-dark: #da525d;
+
+    --color-gray-0: #f9f9f9;
+    --color-gray-1: #e0e0e0;
+    --color-gray-2: #c7c7c7;
+    --color-gray-3: #aeaeae;
+    --color-gray-4: #959595;
+    --color-gray-5: #7d7d7d;
+    --color-gray-6: #646464;
+    --color-gray-7: #4b4b4b;
+    --color-gray-8: #323232;
+    --color-gray-9: #191919;
+
+    --font-primary: sans-serif;
+    --font-headings: 'Roboto Slab', serif;
+
+    --spacing-gutter-medium: 3rem;
+    --spacing-gutter-large: 4rem;
+}
+
+body {
+    background-color:#d4472e;
+    font-family: var(--font-primary);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+.container {
+    width: 60%;
+    margin: 0 auto;
+    text-align: left;
+    background-color: var(--color-primary-light); /* Alterada a cor de fundo */
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+h1 {
+    text-align: left;
+    color: var(--color-dark-text); /* Alterada a cor do texto */
+    font-size: 40px;
+}
+
+.submit-btn {
+    width: 100%; /* Alterada a largura para 100% */
+    height: 50px;
+    padding: 20px; /* Aumentada a quantidade de padding */
+    background-color: #ff4444; /* Alterada a cor de fundo para vermelho */
+    color: var(--color-white); /* Alterada a cor do texto */
+    text-align: center; /* Centralizado o texto */
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    cursor: pointer;
+    font-size: 25px;
+    margin: 25px auto;
+}
+
+.form-group input,
+.form select {
+  width: 97%;
+  border-radius: 5px;
+  padding: 8px;
+  border: 1px solid #ced4da;
+  margin-bottom: 18px;
+}

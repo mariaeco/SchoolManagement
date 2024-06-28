@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv = "X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SISTEMA DE GERENCIAMENTO ESCOLAR</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename = 'index.css') }}">
+</head>
+<body>
+    <div class="grid-container">
+        <div class="item1">
+            <h1>GERENCIA ESTADUAL DE ESCOLAS</h1>
+            <p>Ambienta para uso das secretarias regionais de educação.</p>
+        </div>
+        <div class="item2">
+            <h1>SIGEE SEE</h1>
+                <p>Login gerentes regionais</p>
+            <a href="{{ url_for('gerencia') }}"><button class="item">Login SEE</button></a>
+        </div>
+        <div class="item3">
+            <h1>SIGEE ESCOLA</h1>
+                <p>Login Gestor e Secretarios</p>
+            <a href="{{ url_for('view_escolas') }}"><button class="item">Login Escola</button></a>
+        </div>
+        <div class="item4">
+                <h1>SIGEE PROFESSOR</h1>
+                    <p>Login Professores</p>
+                <a href="{{ url_for('login_prof') }}"><button class="item">Login Professor</button></a>
+        </div>
+        <div class="item5">
+            <h1>SIGEE ALUNO</h1>
+                <p> Login dos Alunos </p>
+            <a href="{{ url_for('view_escolas') }}"><button class="item">Login Aluno</button></a>
+    </div>
+</body>
+
+
+
+

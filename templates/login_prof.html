@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv = "X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adicionar Nova Escola</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename = 'login_prof.css') }}">
+</head>
+
+
+<body>
+    <div class="container">
+        <h1>LOGIN PROFESSOR</h1>
+        <form action = "{{ url_for('login_prof') }}" method="POST">
+            <fieldset>
+                <div class="form-group">
+                    <label for "login">Login </label>
+                    <input type="text" id="login" name="login" required placeholder="Digite seu login"><br><br>
+                </div>
+                <div class="form-group">
+                    <label for "senha">Senha  <br></label>
+                    <input type="text" id="senha" name="senha" required placeholder="Digite sua senha"><br><br>
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="Entrar" class="submit-btn">
+                </div>
+            </div>
+        </form>
+    </div>
+</body>
+    
