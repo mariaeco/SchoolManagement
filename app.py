@@ -79,25 +79,25 @@ def view_alunos():
     return render_template('view_alunos.html', alunos_escola=alunos_escola)
 
 
-@app.route('/login_prof', methods=['GET','POST'])
-def login_prof():
+@app.route('/teacherpages/login', methods=['GET','POST'])
+def login():
     
     login = request.form.get('login')
     senha = request.form.get('senha')
 
     if login == 'maria' and senha == '1234':
-        return render_template("user_professor.html")
+        return render_template("teacherpages/startpage.html")
     else:
-        return render_template('login_prof.html')
+        return render_template('teacherpages/login.html')
     
 
-@app.route('/user_professor', methods=['GET','POST'])
-def user_professor():   
-    return render_template('user_professor.html')
+@app.route('/teacherpages/startpage', methods=['GET','POST'])
+def startpage():   
+    return render_template('teacherpages/startpage.html')
     
 
-@app.route('/minhas_turmas')
-def minhas_turmas():
+@app.route('/teacherpages/view_classes')
+def view_classes():
     conexao = criar_conexao()  # Substitua pela sua função para criar conexão
     cursor = conexao.cursor()
 
@@ -107,11 +107,9 @@ def minhas_turmas():
     resultados = cursor.fetchall()
     cursor.close()
     
-    return render_template('minhas_turmas.html', turmas=turmas)
+    return render_template('teacherpages/view_classes.html', turmas=turmas)
 
     
-
-
     
 if __name__ == "__main__":
     app.run(debug=True)
