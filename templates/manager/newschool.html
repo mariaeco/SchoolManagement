@@ -5,15 +5,15 @@
     <meta http-equiv = "X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Adicionar Nova Escola</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename = 'gerencia.css') }}">
-    <link rel="stylesheet" href="{{ url_for('static', filename = 'nova_escola.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename = 'manager/manager.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename = 'manager/newschool.css') }}">
 </head>
 
 
 <body>
     <div class="container">
         <h1>Adicionar Nova Escola</h1>
-        <form action = "{{ url_for('nova_escola') }}" method="POST">
+        <form action = "{{ url_for('newschool') }}" method="POST">
             <fieldset>
                 <div class="form-group">
                     <label for "codinep">Codigo Inep </label>

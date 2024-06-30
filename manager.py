@@ -1,8 +1,8 @@
 #PARTE ACESSADA PELA GERENCIA DAS ESCOLAS - AS SECRETARIAS DE EDUCAÇÃO
 import sys
 import os
-from class_serie import Turmas
-from class_matricula import Matricula
+from classes import Turmas
+from student import Matricula
 
 class Escolas:
     def __init__(self, host, user, password, database):

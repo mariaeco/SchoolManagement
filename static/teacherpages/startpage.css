@@ -1,0 +1,165 @@
+:root {
+    --color-primary: #269fe6;
+    --color-primary-hover: #2086c2;
+    --color-primary-dark: #13141f;
+    --color-primary-dark-hover: #212336;
+    --color-primary-light: #d4ecfa;
+    --color-primary-light-hover: #bdd8e7;
+
+    --color-white: #fff;
+    --color-black: #000;
+
+    --color-dark-text: #444;
+    --color-info-light: #cce5ff;
+    --color-debug-light: #cce5ff;
+    --color-success-light: #d4edda;
+    --color-alert-light: #fff3cd;
+    --color-warning-light: #fff3cd;
+    --color-error-light: #f8d7da;
+
+    --color-info-dark: #4d86c4;
+    --color-debug-dark: #4d86c4;
+    --color-success-dark: #4a9c5d;
+    --color-alert-dark: #927f40;
+    --color-warning-dark: #927f40;
+    --color-error-dark: #da525d;
+
+    --color-gray-0: #f9f9f9;
+    --color-gray-1: #e0e0e0;
+    --color-gray-2: #c7c7c7;
+    --color-gray-3: #aeaeae;
+    --color-gray-4: #959595;
+    --color-gray-5: #7d7d7d;
+    --color-gray-6: #646464;
+    --color-gray-7: #4b4b4b;
+    --color-gray-8: #323232;
+    --color-gray-9: #191919;
+
+    --font-primary: sans-serif;
+    --font-headings: 'Roboto Slab', serif;
+
+    --spacing-gutter-medium: 3rem;
+    --spacing-gutter-large: 4rem;
+}
+
+body {
+    background-color:#2086c2;
+    font-family: var(--font-primary);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.grid-container {
+    grid-template-rows: 0.6fr 0.8fr;
+    display: grid;
+    grid-template-areas:         "a a a a a a"    "d d e e c c";
+    grid-gap: 30px;
+    height: 500px;
+    padding: 50px;
+    margin: auto;
+    width: 90%;
+    margin-bottom: 100px;
+  }
+  
+  .grid-container>div {
+    text-align: center;
+    padding: 30px 0;
+    font-size: 30px;
+    border-radius: 10px;
+    box-shadow: 10px 9px 33px -12px rgba(0, 0, 0, 0.95);
+    color: #fff;
+    position: relative;
+    justify-self: center; /* Alinha os itens horizontalmente */
+  }
+  
+
+  .item1 {
+    grid-area: a;
+    background-color: #0F2027;
+    width: 100%; 
+    position: relative; /* Necessário para o posicionamento absoluto */
+
+  }
+
+
+  .item1 button.item {
+    padding: 12px 18px;
+    font-size: 16px;
+    border-radius: 10px;
+    border: 1px solid #fff;
+    background-color:#269fe6; /* Alterado para uma cor mais escura com transparência */
+    color: rgb(255, 255, 255);
+    position: absolute;
+    top: 30px; /* Ajuste conforme necessário */
+    right: 50px; /* Ajuste conforme necessário */
+    left: 1600px;
+    bottom: 160px;
+    cursor: pointer;
+}
+  
+  .item2{
+    grid-area: d;
+    background-color:#103747; 
+    width: 100%; 
+    
+  }
+  
+  .item3 {
+    grid-area: e;
+    background-color:#103747; 
+    width: 100%; 
+  }
+
+  .item4 {
+    grid-area: c;
+    background-color:#103747; 
+    width: 100%; 
+  }
+
+  .item1 h1 {
+    font-size: 38px; /* Tamanho da fonte desejado */
+}
+  .item1 p {
+    font-size: 22px; /* Tamanho da fonte desejado */
+}
+
+  .item2 h1 {
+    font-size: 18px; /* Tamanho da fonte desejado */
+}
+  .item2 p {
+    font-size: 18px; /* Tamanho da fonte desejado */
+}
+
+  .item3 h1 {
+    font-size: 18px; /* Tamanho da fonte desejado */
+}
+
+    .item3 p {
+    font-size: 18px; /* Tamanho da fonte desejado */
+  }
+
+
+  .item4 h1 {
+    font-size: 18px; /* Tamanho da fonte desejado */
+}
+
+    .item4 p {
+    font-size: 18px; /* Tamanho da fonte desejado */
+  }
+
+
+  button.item {
+    padding: 12px 18px;
+    font-size: 18px;
+    border-radius: 10px;
+    border: 1px solid #fff;
+    background-color: transparent;
+    color: rgb(255, 255, 255);
+    position: absolute;
+    bottom: 30px;
+    left: 30px;
+    cursor: pointer;
+  }

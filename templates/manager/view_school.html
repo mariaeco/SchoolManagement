@@ -5,31 +5,33 @@
     <meta http-equiv = "X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Escolas do Estado da Paraíba</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename = 'view_escolas.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename = 'manager/view_school.css') }}">
 
 </head>
 
 
 <body>
     <div class="container">
-        <h1>Nº DE ALUNOS MATRICULADOS POR ESCOLA</h1>
+        <h1>Listagem Escolas Estaduais</h1>
         <table>
             <thead>
                 <tr>
                     <th>Nome da Escola</th>
-                    <th>Total de Alunos</th>
+                    <th>GRE</th>
+                    <th>Salas</th>
                 </tr>
             </thead>
             <tbody>
-                {% for aluno in alunos_escola %}
+                {% for escola in escolas %}
                 <tr>
-                    <td>{{ aluno[1] }}</td>
-                    <td>{{ aluno[2] }}</td>
+                    <td>{{ escola[1] }}</td>
+                    <td>{{ escola[2] }}</td>
+                    <td>{{ escola[3] }}</td>
                 </tr>
                 {% endfor %}
             </tbody>
         </table>
-        <a href="{{ url_for('gerencia') }}"><button class="return-btn">Retornar ao Menu Escolas</button></a>
+        <a href="{{ url_for('manager') }}"><button class="return-btn">Retornar ao Menu Escolas</button></a>
     </div>
 </body>
 </html>

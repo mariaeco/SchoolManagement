@@ -1,6 +1,6 @@
 from flask import Flask, render_template, request, redirect, url_for
 import mysql.connector
-from class_gerencia import Escolas
+from manager import Escolas
 
 app = Flask(__name__)
 
@@ -22,19 +22,16 @@ def criar_conexao():
 # Rota para exibir as escolas
 @app.route('/')
 def index():
-    print("PAGINA INICIAL")
-    
     return render_template('index.html')
 
-@app.route('/gerencia')
-def gerencia():
-    print("PAGINA INICIAL DE GERENCIA")
-    return render_template('gerencia.html')
+@app.route('/manager')
+def manager():
+    return render_template('manager/manager.html')
     
     
 # Rota para adicionar uma nova escola
-@app.route('/nova_escola', methods=['GET','POST'])
-def nova_escola():
+@app.route('/manager/newschool', methods=['GET','POST'])
+def newschool():
     if request.method == "POST":
         codinep = request.form['codinep']
         nome = request.form['nome']
@@ -49,11 +46,11 @@ def nova_escola():
         conexao.commit()
         conexao.close()
         
-        return redirect(url_for('gerencia'))  # Redirecionar para a página inicial após adicionar a escola
-    return render_template('nova_escola.html')  # Se o método não for POST, retornar o template para criar nova escola
+        return redirect(url_for('manager'))  # Redirecionar para a página inicial após adicionar a escola
+    return render_template('manager/newschool.html')  # Se o método não for POST, retornar o template para criar nova escola
 
-@app.route('/view_escolas')
-def view_escolas():
+@app.route('/manager/view_school')
+def view_school():
     conexao = criar_conexao()  # Criar conexão
     cursor = conexao.cursor()
     escolas = Escolas(host='localhost', user='maria_c', password='puffy2020', database='bdprojeto')
@@ -61,11 +58,11 @@ def view_escolas():
     cursor.execute('SELECT * FROM escola')
     escolas = cursor.fetchall()
     conexao.close()
-    return render_template('view_escolas.html', escolas=escolas)
+    return render_template('manager/view_school.html', escolas=escolas)
 
     
-@app.route('/view_alunos')
-def view_alunos():
+@app.route('/manager/view_student')
+def view_student():
     conexao = criar_conexao()  # Substitua pela sua função para criar conexão
     cursor = conexao.cursor()
     alunos_escola = Escolas(host='localhost', user='maria_c', password='puffy2020', database='bdprojeto')
@@ -76,7 +73,7 @@ def view_alunos():
 
     # Fechar o cursor e a conexão
     cursor.close()
-    return render_template('view_alunos.html', alunos_escola=alunos_escola)
+    return render_template('manager/view_student.html', alunos_escola=alunos_escola)
 
 
 @app.route('/teacherpages/login', methods=['GET','POST'])
