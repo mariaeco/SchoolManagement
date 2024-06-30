@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv = "X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MINHAS TURMAS</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename = 'gerencia.css') }}">
+</head>
+<body>
+    <div class="grid-container">
+        <div class="item1">
+            <h1>MINHAS TURMAS</h1>
+            <a href="{{ url_for('index') }}"><button class="item">SAIR</button></a>
+        </div>
+        <div class="item2">
+            <h1>
+                <a href="{{ url_for('view_classes') }}"><button class="item">REGISTRAR AULA</button></a>
+            </h1>
+        </div>
+        <div class="item3">
+            <h1>INSERIR FREQUÊNCIA</h1>
+            <a href="{{ url_for('view_escolas') }}"><button class="item">INSERIR FREQUÊNCIA</button></a>
+        </div>
+        <div class="item4">
+            <h1>INSERIR NOTAS</h1>
+            <a href="{{ url_for('view_escolas') }}"><button class="item">NOVA NOTA</button></a>
+        </div>
+    </div>
+</body>
+
