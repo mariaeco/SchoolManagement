@@ -1,6 +1,6 @@
 from flask import Flask, render_template, request, redirect, url_for
 import mysql.connector
-from manager import Escolas
+from functions.manager import Escolas
 
 app = Flask(__name__)
 
@@ -19,11 +19,12 @@ def criar_conexao():
     )
     return conexao
 
-# Rota para exibir as escolas
+# Rota para páginas
 @app.route('/')
 def index():
     return render_template('index.html')
 
+#pagina da gerencia
 @app.route('/manager')
 def manager():
     return render_template('manager/manager.html')
